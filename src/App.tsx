@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Center, PadBox } from "@bedrock-layout/primitives";
+import Hero from "./components/Hero";
 
+// TODO: create grid layout with buttons to render the different components.
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<PadBox
+			as={Center}
+			padding="lg"
+			maxWidth="85rem"
+			style={{ fontFamily: "sans-serif" }}
+		>
+			<Hero />
+		</PadBox>
+	);
 }
 
 export default App;
